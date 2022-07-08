@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "883546892413",
+    "project_id": "video-conference-e10c5",
+    "storage_bucket": "video-conference-e10c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883546892413:android:9fafcebbe2351eb3efa914",
+        "android_client_info": {
+          "package_name": "com.example.video_conference"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883546892413-td120itau97acmg9fak674cpsm6u1da5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.video_conference",
+            "certificate_hash": "d68c0a991d42555293a3fb380c0e09995a8e4be7"
+          }
+        },
+        {
+          "client_id": "883546892413-2g4amh2effnhe76v1lt881k58saj8q64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa66TKRHBRau5LorV-blOqOALeyd9JFuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883546892413-2g4amh2effnhe76v1lt881k58saj8q64.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
