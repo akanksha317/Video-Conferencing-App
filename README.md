@@ -1,1 +1,2 @@
-# Campus-Splitwise
+# Video Conferencing App
+
