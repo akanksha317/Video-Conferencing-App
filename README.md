@@ -1,5 +1,5 @@
 # Video conferencing app #
-Zoom Clone that works on Android
+Video Conferencing App that works on Android
 
 ### Features: ###
 Google Sign In<br>
