@@ -1,5 +1,5 @@
 # Video conferencing app #
-Video Conferencing App that works on Android
+Video Conferencing App that works on Android and iOS
 
 ### Features: ###
 Google Sign In<br>
