@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:video_conference/resources/auth_methods.dart';
+import 'package:video_conference/screens/history_meeting_screen.dart';
+import 'package:video_conference/screens/meeting_screen.dart';
 import 'package:video_conference/utils/colors.dart';
 import 'package:video_conference/widgets/custom_button.dart';
-import 'package:video_conference/widgets/home_meeting_button.dart';
+
+
 
 class HomeScreen extends StatefulWidget {
+  
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
@@ -12,6 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  
   int _page = 0;
   onPageChanged(int page) {
     setState(() {
@@ -19,12 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  // List<Widget> pages = [
-  //   MeetingScreen(),
-  //   const HistoryMeetingScreen(),
-  //   const Text('Contacts'),
-  //   CustomButton(text: 'Log Out', onPressed: () => AuthMethods().signOut()),
-  // ];
+  List<Widget> pages = [
+       MeetingScreen(),
+       const HistoryMeetingScreen(),
+       const Text('Contacts'),
+       CustomButton(text: 'Log Out', onPressed: () => AuthMethods().signOut()),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -36,46 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
       ),
       // body: pages[_page],
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              HomeMeetingButton(
-                onPressed: () {},
-                text: 'New meeting',
-                icon: Icons.videocam,
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                text: 'Join meeting',
-                icon: Icons.add_box_rounded,
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                text: 'schedule',
-                icon: Icons.calendar_today,
-              ),
-              HomeMeetingButton(
-                onPressed: () {},
-                text: 'Share Screen',
-                icon: Icons.arrow_upward_rounded,
-              ),
-            ],
-          ),
-          const Expanded(
-            child: Center(
-              child: Text(
-                'create/join meeting with just a click',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+      body: pages[_page],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: footerColor,
         selectedItemColor: Colors.white,
@@ -85,12 +51,6 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         unselectedFontSize: 14,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.comment_bank,
-            ),
-            label: 'Meet & Char',
-          ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.lock_clock,
@@ -114,3 +74,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
