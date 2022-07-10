@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:video_conference/resources/auth_methods.dart';
 import 'package:video_conference/screens/home_screen.dart';
 import 'package:video_conference/screens/login_screen.dart';
+import 'package:video_conference/screens/video_call_screen.dart';
 import 'package:video_conference/utils/colors.dart';
 
+//
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -26,6 +28,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginScreen(),
         '/home': (context) => const HomeScreen(),
+        '/video-call': (context) => const VideoCallScreen(),
       },
       home: StreamBuilder(
           stream: AuthMethods().authChanges,
